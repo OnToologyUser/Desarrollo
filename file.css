@@ -1,0 +1,58 @@
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
+ background-color: #555D69;
+}
+.tg {
+ border-collapse: collapse;
+ border-spacing: 0;
+ border-color: #ccc;
+ width: 96%;
+ margin-left: 2%;
+ margin-right: 2%;
+}
+
+.tg tr:first-child {
+ border-style: solid;
+ border-width: 1px;
+ border-color: #454b56;
+ border-bottom: 2px solid #fe6e05;
+ text-align: center;
+
+}
+
+.tg td {
+ font-family: Arial, sans-serif;
+ font-size: 14px;
+ padding: 10px 5px;
+ border-style: solid;
+ border-width: 1px;
+ overflow: hidden;
+ word-break: normal;
+ border-color: #454b56;
+ color: #e5e5e5;
+ background-color: #555D69;
+ text-align: left;
+}
+
+.tg th {
+ font-family: Arial, sans-serif;
+ font-size: 14px;
+ font-weight: bold;
+ padding: 10px 5px;
+ overflow: hidden;
+ word-break: normal;
+ color: #ffffff;
+ background-color: #505869;
+ border-width: 1px;
+}
+
+.tg .tg-4eph {
+ background-color: #0f0f0f;
+ text-align: center;
+}
+
+h1 {
+	 font-family: Arial, sans-serif;
+	 text-align: center;
+}

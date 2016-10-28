@@ -1,0 +1,55 @@
+<html>
+	<meta charset="Latin-1">
+	<head>
+	  <link rel="stylesheet" href="./file.css">
+	</head>
+	
+	<body>
+		<h1> Dataset StopTimes.csv</h1>
+	
+	
+		<table class="tg">
+<tr>
+  <td><strong>COLUMN</strong></td>
+  <td><strong>TYPE</strong></td>
+  <td><strong>COMMENTS/RANGE(rounded)</strong></td>
+  <td><strong>PROBLEMS</strong></td>
+</tr>
+ 
+<tr>
+  <td>stop_id</td>
+  <td>Integer Unique</td>
+  <td>Identifica de forma exclusiva a una parada o estación.<br> Rango: [0 - numParadas] Especificamente [0 - 10]</td>
+	<td>Es posible que varias rutas utilicen una misma parada.</td>
+</tr>
+ 
+<tr>
+  <td>stop_name</td>
+  <td>String Unique</td>
+  <td>Nombre de la parada. Intentando que sea comprensible. <br> Rango: ["" - Total of Memory]</td>
+</tr>
+ 
+<tr>
+  <td>stop_lat</td>
+  <td>Decimal Not Unique</td>
+  <td>Latitud de una parada o estacion. <br> Rango de WGS 84</td>
+</tr>
+
+<tr>
+  <td>stop_lon</td>
+  <td>Decimal Not Unique</td>
+  <td>Longitud de una parada o estacion. <br> Rango de WGS 84 y [-180º to 180º]</td>
+	<td>Valores negativos</td>
+</tr>
+
+</table>
+	
+	
+	
+	
+	
+	
+	
+	
+	</body>
+</html>
