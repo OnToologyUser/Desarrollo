@@ -1,0 +1,109 @@
+{
+  "@context" : {
+    "url" : {
+      "@id" : "http://dbpedia.org/property/url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "end_date" : {
+      "@id" : "http://smartsevilla.es/ontology#end_date",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "estaEnCalle" : {
+      "@id" : "http://smartsevilla.es/ontology#estaEnCalle",
+      "@type" : "@id"
+    },
+    "Travel" : {
+      "@id" : "http://dbpedia.org/page/Travel"
+    },
+    "Monument" : {
+      "@id" : "http://dbpedia.org/ontology/Monument"
+    },
+    "service_id" : {
+      "@id" : "http://smartsevilla.es/ontology#service_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "longitude" : {
+      "@id" : "http://dbpedia.org/property/longitude",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "timeZone" : {
+      "@id" : "http://dbpedia.org/property/timeZone",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Street" : {
+      "@id" : "http://dbpedia.org/ontology/Street"
+    },
+    "route_id" : {
+      "@id" : "http://smartsevilla.es/ontology#route_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "latitude" : {
+      "@id" : "http://dbpedia.org/property/latitude",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "name" : {
+      "@id" : "http://dbpedia.org/property/name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "address" : {
+      "@id" : "http://dbpedia.org/property/address",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "photo" : {
+      "@id" : "http://dbpedia.org/property/photo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Bus_stop" : {
+      "@id" : "http://dbpedia.org/page/Bus_stop"
+    },
+    "phoneNumber" : {
+      "@id" : "http://dbpedia.org/property/phoneNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "provee" : {
+      "@id" : "http://smartsevilla.es/ontology#provee",
+      "@type" : "@id"
+    },
+    "type" : {
+      "@id" : "http://dbpedia.org/property/type",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "stop_id" : {
+      "@id" : "http://smartsevilla.es/ontology#stop_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Museum" : {
+      "@id" : "http://dbpedia.org/ontology/Museum"
+    },
+    "start_date" : {
+      "@id" : "http://smartsevilla.es/ontology#start_date",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "establece" : {
+      "@id" : "http://smartsevilla.es/ontology#establece",
+      "@type" : "@id"
+    },
+    "service" : {
+      "@id" : "http://dbpedia.org/ontology/service"
+    },
+    "language" : {
+      "@id" : "http://dbpedia.org/property/language",
+      "@type" : "http://www.w3.org/2001/XMLSchema#language"
+    },
+    "fullname" : {
+      "@id" : "http://dbpedia.org/property/fullname",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tieneParadaEn" : {
+      "@id" : "http://smartsevilla.es/ontology#tieneParadaEn",
+      "@type" : "@id"
+    },
+    "BusCompany" : {
+      "@id" : "http://dbpedia.org/ontology/BusCompany"
+    },
+    "contieneEdificio" : {
+      "@id" : "http://smartsevilla.es/ontology#contieneEdificio",
+      "@type" : "@id"
+    }
+  }
+}

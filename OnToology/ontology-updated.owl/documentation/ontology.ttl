@@ -1,0 +1,269 @@
+@prefix :        <http://smartsevilla.es/ontology#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
+
+<http://dbpedia.org/page/Travel>
+      a       owl:Class .
+
+:contieneEdificio
+      a       owl:ObjectProperty ;
+      rdfs:domain <http://dbpedia.org/ontology/Street> ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf
+                        [ a       rdf:List ;
+                          rdf:first <http://dbpedia.org/ontology/Monument> ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first <http://dbpedia.org/ontology/Museum> ;
+                                    rdf:rest ()
+                                  ]
+                        ]
+              ] .
+
+:establece
+      a       owl:ObjectProperty ;
+      rdfs:domain <http://dbpedia.org/ontology/BusCompany> ;
+      rdfs:range <http://dbpedia.org/page/Travel> .
+
+:     a       owl:Ontology .
+
+:service_id
+      a       owl:DatatypeProperty ;
+      rdfs:domain <http://dbpedia.org/ontology/service> ;
+      rdfs:range xsd:string .
+
+<http://dbpedia.org/page/Bus_stop>
+      a       owl:Class .
+
+<http://dbpedia.org/property/photo>
+      a       owl:DatatypeProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf
+                        [ a       rdf:List ;
+                          rdf:first <http://dbpedia.org/ontology/Monument> ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first <http://dbpedia.org/ontology/Museum> ;
+                                    rdf:rest ()
+                                  ]
+                        ]
+              ] ;
+      rdfs:range xsd:anyURI .
+
+<http://dbpedia.org/property/phoneNumber>
+      a       owl:DatatypeProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf
+                        [ a       rdf:List ;
+                          rdf:first <http://dbpedia.org/ontology/BusCompany> ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first <http://dbpedia.org/ontology/Monument> ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first <http://dbpedia.org/ontology/Museum> ;
+                                              rdf:rest ()
+                                            ]
+                                  ]
+                        ]
+              ] ;
+      rdfs:range xsd:string .
+
+<http://dbpedia.org/property/name>
+      a       owl:DatatypeProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf
+                        [ a       rdf:List ;
+                          rdf:first <http://dbpedia.org/ontology/BusCompany> ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first <http://dbpedia.org/ontology/Street> ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first <http://dbpedia.org/ontology/service> ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first <http://dbpedia.org/page/Travel> ;
+                                                        rdf:rest ()
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] ;
+      rdfs:range xsd:string .
+
+<http://dbpedia.org/property/language>
+      a       owl:DatatypeProperty ;
+      rdfs:domain <http://dbpedia.org/ontology/BusCompany> ;
+      rdfs:range xsd:language .
+
+<http://dbpedia.org/property/address>
+      a       owl:DatatypeProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf
+                        [ a       rdf:List ;
+                          rdf:first <http://dbpedia.org/ontology/Monument> ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first <http://dbpedia.org/ontology/Museum> ;
+                                    rdf:rest ()
+                                  ]
+                        ]
+              ] ;
+      rdfs:range xsd:string .
+
+:stop_id
+      a       owl:DatatypeProperty ;
+      rdfs:domain <http://dbpedia.org/page/Bus_stop> ;
+      rdfs:range xsd:integer .
+
+<http://dbpedia.org/property/latitude>
+      a       owl:DatatypeProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf
+                        [ a       rdf:List ;
+                          rdf:first <http://dbpedia.org/ontology/Monument> ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first <http://dbpedia.org/ontology/Museum> ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first <http://dbpedia.org/page/Bus_stop> ;
+                                              rdf:rest ()
+                                            ]
+                                  ]
+                        ]
+              ] ;
+      rdfs:range xsd:double .
+
+<http://dbpedia.org/property/longitude>
+      a       owl:DatatypeProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf
+                        [ a       rdf:List ;
+                          rdf:first <http://dbpedia.org/ontology/Monument> ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first <http://dbpedia.org/ontology/Museum> ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first <http://dbpedia.org/page/Bus_stop> ;
+                                              rdf:rest ()
+                                            ]
+                                  ]
+                        ]
+              ] ;
+      rdfs:range xsd:double .
+
+<http://dbpedia.org/property/fullname>
+      a       owl:DatatypeProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf
+                        [ a       rdf:List ;
+                          rdf:first <http://dbpedia.org/ontology/BusCompany> ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first <http://dbpedia.org/ontology/Monument> ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first <http://dbpedia.org/ontology/Museum> ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first <http://dbpedia.org/page/Bus_stop> ;
+                                                        rdf:rest
+                                                                [ a       rdf:List ;
+                                                                  rdf:first <http://dbpedia.org/page/Travel> ;
+                                                                  rdf:rest ()
+                                                                ]
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] ;
+      rdfs:range xsd:string .
+
+<http://dbpedia.org/ontology/BusCompany>
+      a       owl:Class .
+
+<http://dbpedia.org/ontology/Street>
+      a       owl:Class .
+
+:end_date
+      a       owl:DatatypeProperty ;
+      rdfs:domain <http://dbpedia.org/ontology/service> ;
+      rdfs:range xsd:dateTime .
+
+:provee
+      a       owl:ObjectProperty ;
+      rdfs:domain <http://dbpedia.org/ontology/BusCompany> ;
+      rdfs:range <http://dbpedia.org/ontology/service> .
+
+<http://dbpedia.org/property/url>
+      a       owl:DatatypeProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf
+                        [ a       rdf:List ;
+                          rdf:first <http://dbpedia.org/ontology/BusCompany> ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first <http://dbpedia.org/ontology/Monument> ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first <http://dbpedia.org/ontology/Museum> ;
+                                              rdf:rest ()
+                                            ]
+                                  ]
+                        ]
+              ] ;
+      rdfs:range xsd:anyURI .
+
+:start_date
+      a       owl:DatatypeProperty ;
+      rdfs:domain <http://dbpedia.org/ontology/service> ;
+      rdfs:range xsd:dateTime .
+
+<http://dbpedia.org/ontology/service>
+      a       owl:Class .
+
+<http://dbpedia.org/property/type>
+      a       owl:DatatypeProperty ;
+      rdfs:domain <http://dbpedia.org/page/Travel> ;
+      rdfs:range xsd:integer .
+
+<http://dbpedia.org/ontology/Museum>
+      a       owl:Class .
+
+:route_id
+      a       owl:DatatypeProperty ;
+      rdfs:domain <http://dbpedia.org/page/Travel> ;
+      rdfs:range xsd:integer .
+
+<http://dbpedia.org/ontology/Monument>
+      a       owl:Class .
+
+:estaEnCalle
+      a       owl:ObjectProperty ;
+      rdfs:domain <http://dbpedia.org/page/Bus_stop> ;
+      rdfs:range <http://dbpedia.org/ontology/Street> .
+
+<http://dbpedia.org/property/timeZone>
+      a       owl:DatatypeProperty ;
+      rdfs:domain <http://dbpedia.org/ontology/BusCompany> ;
+      rdfs:range xsd:string .
+
+:tieneParadaEn
+      a       owl:ObjectProperty ;
+      rdfs:domain <http://dbpedia.org/page/Travel> ;
+      rdfs:range <http://dbpedia.org/page/Bus_stop> .
